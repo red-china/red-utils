@@ -8,12 +8,12 @@ Red [
 ]
 
 merge: func [
-	block1          [block!]
-	block2          [block!]
-	return:         [block!]
+	block1     [block!]
+	block2     [block!]
+	return:    [block!]
 	/local
-	    result      [block!]
-	    index       [integer!]
+	    result [block!]
+	    index  [integer!]
 ][
 	result: copy []
 	index: 1
