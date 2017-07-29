@@ -8,13 +8,8 @@ Red [
 ]
 
 capitalize: func [
-    string     [any-string!]
-    return:    [any-string!]
-    /local
-        result [any-string!]
+    string  [any-string!]
+    return: [any-string!]
 ][
-    result: copy string
-
-    replace result first result uppercase first result
-    replace result next result lowercase copy next result
+    make type? string rejoin [uppercase first string lowercase next string]
 ]
