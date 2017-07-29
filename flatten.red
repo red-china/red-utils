@@ -11,23 +11,14 @@ flatten: func [
 	block      [block!]
 	return:    [block!]
 	/local
-		result [block!]
+	    result [block!]
+	    value
 ][
 	result: copy []
 
-	foreach flatten-value block [
-		either not block? flatten-value [
-			append result flatten-value
-		][
-			repend result flatten flatten-value
-		]
+	foreach value block [
+		either block? value [repend result flatten value][append result value]
 	]
 
 	result
 ]
-
-comment {
-	data: [1 [#"a" [127.0.0.1] #"b"] %flatten.red [#(c d) "end"]]
-
-	probe flatten data
-}
