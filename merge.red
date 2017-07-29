@@ -7,28 +7,30 @@ Red [
 	License: "GPL-3.0"
 ]
 
-#include %map.red
-
 merge: func [
-	block1         [block!]
-	block2         [block!]
-	return:        [block!]
+	block1          [block!]
+	block2          [block!]
+	return:         [block!]
 	/local
-		merge-from [function!]
+	    result      [block!]
+	    index       [integer!]
 ][
-	merge-from: func [
-		a [any-type!]
-		b [any-type!]
-	][
-		repend copy [] [a b]
+	result: copy []
+	index: 1
+
+	while [not all [none? block1/:index none? block2/:index]] [
+		if not none? block1/:index [
+			append/only result copy/deep reduce [block1/:index]
+		]
+		if not none? block2/:index [
+			either none? result/:index [
+				append/only result copy/deep reduce [block2/:index]
+			][
+				append result/:index copy/deep reduce [block2/:index]
+			]
+		]
+		index: index + 1
 	]
-
-	map/every :merge-from reduce [block1 block2]
+	
+	result
 ]
-
-comment {
-	data1: [1 2 3]
-	data2: ["A" "B" "C"]
-
-	probe merge data1 data2
-}
