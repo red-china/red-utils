@@ -9,3 +9,4 @@ About how to use, please see examples folder.
 - merge
 - capitalize
 - fill
+- compact
