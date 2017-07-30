@@ -21,9 +21,7 @@ compact: func [
                 append result value
             ]
         ][
-            if any [block? value map? value] [
-                if 0 = length? value [continue]
-            ]
+            if series? value [if 0 = length? value [continue]]
             append result copy/deep reduce [value]
         ]
     ]
