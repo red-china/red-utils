@@ -8,3 +8,4 @@ About how to use, please see examples folder.
 - map
 - merge
 - capitalize
+- fill
