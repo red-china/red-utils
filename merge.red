@@ -20,12 +20,13 @@ merge: func [
 
 	while [not all [none? block1/:index none? block2/:index]] [
 		if not none? block1/:index [
-			append/only result copy/deep reduce [block1/:index]
+			append result copy/deep reduce [block1/:index]
 		]
 		if not none? block2/:index [
 			either none? result/:index [
-				append/only result copy/deep reduce [block2/:index]
+				append result copy/deep reduce [block2/:index]
 			][
+				result/:index: copy/deep reduce [result/:index]
 				append result/:index copy/deep reduce [block2/:index]
 			]
 		]
