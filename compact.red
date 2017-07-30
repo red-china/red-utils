@@ -17,7 +17,7 @@ compact: func [
 
     foreach value block [
         either word? value [
-            if not any [value = 'false value = 'off value = 'no] [
+            if not any [false = get value none = get value] [
                 append result value
             ]
         ][
