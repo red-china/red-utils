@@ -10,3 +10,4 @@ About how to use, please see examples folder.
 - capitalize
 - fill
 - compact
+- slice
