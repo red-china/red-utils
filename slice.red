@@ -16,7 +16,7 @@ slice: func [
 ][
     result: reverse copy/deep skip series start - 1
 
-    loop (length? series) - end + 1 [take result]
+    loop (length? series) - end [take result]
 
     reverse result
 ]
