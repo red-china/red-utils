@@ -1,5 +1,5 @@
 # red-utils
-The utility function set for Red programming language.
+The utility function sets for Red programming language.
 
 # functions
 About how to use, please see examples folder.
@@ -36,8 +36,8 @@ About how to use, please see examples folder.
 ```
 - slice
 ```red
-  >> slice ["A" "B" "C" "D"] 2 4
+  >> slice ["A" "B" "C" "D"] 2 3
   == ["B" "C"]
-  >> slice %test.red 1 7
+  >> slice %test.red 1 6
   == %test.r
 ```
