@@ -1,5 +1,5 @@
 Red [
-    Title:   "fill function"
+    Title:   "fill example"
     Version: 0.0.1
     Author:  "pixcai<pixcai@163.com>"
     File:    %fill.red

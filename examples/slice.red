@@ -1,5 +1,5 @@
 Red [
-    Title:   "slice function"
+    Title:   "slice example"
     Version: 0.0.1
     Author:  "pixcai<pixcai@163.com>"
     File:    %slice.red
