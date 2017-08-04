@@ -41,3 +41,10 @@ About how to use, please see examples folder.
   >> slice %test.red 1 6
   == %test.r
 ```
+- without
+```red
+  >> without [1 "ABC" true] ["ABC"]
+  == [1 true]
+  >> without http://google.com ["g" "e"]
+  == http://ool.com
+```
