@@ -48,3 +48,14 @@ About how to use, please see examples folder.
   >> without http://google.com ["g" "e"]
   == http://ool.com
 ```
+- rand
+```red
+  >> rand
+  == 0.3
+  >> rand/range 2 8
+  == 5
+  >> rand/only [3 5 6 7]
+  == 7
+  >> rand/only "ABCD"
+  == #"B"
+```
