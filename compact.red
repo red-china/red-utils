@@ -9,6 +9,7 @@ Red [
 
 compact: func [
     block      [block!]
+    return:    [block!]
     /local
         result [block!]
         value

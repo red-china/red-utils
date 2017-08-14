@@ -11,6 +11,7 @@ slice: func [
     series     [series!]
     start      [integer!]
     end        [integer!]
+    return:    [series!]
     /local
         result [series!]
 ][
