@@ -20,8 +20,6 @@ rand: func [
     random/seed to-integer now
 
     either range [min + random (max - min)][
-        either only [pick series random length? series][
-            random/only 0 ... 1
-        ]
+        either only [random/only series][random/only 0 ... 1]
     ]
 ]
